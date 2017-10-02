@@ -1,0 +1,132 @@
+<div>
+  <div id="page-title">
+    <h2>
+      <span>Patient Search</span></h2>
+  </div>
+
+  <div class="panel">
+    <div class="panel-body">
+      <form (submit)="search()">
+        <div class="example-box-wrapper">
+          <div class="form-horizontal bordered-row">
+            <div class="col-md-12">
+              <div class="row">
+                <div>
+
+                  <div>
+                    <!-- First Criteria-->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <md-input-container class="example-full-width" style="width:100%">
+                          <input mdInput [(ngModel)]="criteria.firstName" placeholder="First Name" name="firstName">
+                        </md-input-container>
+
+                      </div>
+                    </div>
+
+                    <!-- Second Criteria-->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <md-input-container class="example-full-width" style="width:100%">
+                          <input mdInput [(ngModel)]="criteria.email" placeholder="Email" name="email">
+                        </md-input-container>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+
+          <br/>
+          <br/>
+
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <button type="submit" md-raised-button>Search</button>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-body">
+
+      <div class="form-horizontal bordered-row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <h3 class="title-hero">
+            Search Results
+          </h3>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+      <div class="example-box-wrapper">
+        <div class="form-horizontal bordered-row">
+          <div class="col-md-12">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>#</th>
+
+                  <th>
+                    <span> First Name</span>
+                  </th>
+
+                  <th>
+                    <span> Last Name</span>
+                  </th>
+                  <th>
+                    <span>email</span>
+                  </th>
+
+                  <th>Action</th>
+
+                </tr>
+              </thead>
+              <tbody *ngIf="results">
+
+
+                <tr *ngFor="let row of results;let myindex=index">
+                  <td>{{myindex+1}}</td>
+                  <td>
+                    {{row.firstName}}
+
+                  </td>
+                  <td>
+                    {{row.firstName}}
+
+                  </td>
+
+                  <td>
+                    {{row.email}}
+                  </td>
+
+                  <td>
+                    <button (click)="openDialog(row.id)" type="button" md-raised-button>Prescribe</button>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>

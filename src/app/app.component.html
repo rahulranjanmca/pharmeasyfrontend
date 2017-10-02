@@ -1,0 +1,18 @@
+<div class="page-wrapper" caniNgBusy>
+    <navbar-cmp  *ngIf="loggedIn"></navbar-cmp>
+    <sidebar-cmp  *ngIf="loggedIn"></sidebar-cmp>
+
+    <div id="page-content-wrapper">
+        <div id="page-content" style="min-height: 300px;">
+            <div class="container">
+                <router-outlet></router-outlet>
+            </div>
+            
+        </div>
+    </div>
+
+    <div *ngIf="loggedIn">
+        <footer-cmp></footer-cmp>
+    </div>
+
+</div>

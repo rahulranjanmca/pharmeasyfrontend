@@ -1,0 +1,70 @@
+<div id="page-sidebar">
+  <div class="scroll-sidebar">
+
+
+    <ul id="sidebar-menu" class="sf-js-enabled sf-arrows">
+      <li class="header"><span>Overview</span></li>
+      <li>
+        <a [routerLink]="['dashboard']" title="Dashboard">
+                    <span class="glyphicon glyphicon-dashboard"></span>
+                    <span>Dashboard</span>
+                    
+                </a>
+      </li>
+
+      <li *ngIf="hasAuthority('doctor') || hasAuthority('pharmacist')">
+        <a [routerLink]="['patient-search']" title="Patient Search">
+                        <span class="glyphicon glyphicon-dashboard"></span>
+                        <span>Patient Search</span>
+                    </a>
+      </li>
+      <li *ngIf="hasAuthority('doctor') || hasAuthority('pharmacist')">
+        <a [routerLink]="['nonauthorized-prescription','patient-prescription-search']" title="Patient Prescription Search">
+                    <span class="glyphicon glyphicon-dashboard"></span>
+                    <span>Prescription Search</span>
+                </a>
+      </li>
+
+      <li *ngIf="hasAuthority('doctor') || hasAuthority('pharmacist')" >
+        <a [routerLink]="['authorized-prescription', 'patient-prescription-search']" title="Patient Prescription Search">
+                        <span class="glyphicon glyphicon-dashboard"></span>
+                        <span>My Patient Prescription</span>
+                    </a>
+      </li>
+
+      <li *ngIf="hasAuthority('patient')" >
+        <a [routerLink]="['my-prescription','patient-prescription-search']" title="Patient Prescription Search">
+                            <span class="glyphicon glyphicon-dashboard"></span>
+                            <span>My Prescriptions</span>
+                        </a>
+      </li>
+
+      <li *ngIf="hasAuthority('patient')" >
+        <a [routerLink]="['pending-prescription-search']" title="Patient Prescription Search">
+                            <span class="glyphicon glyphicon-dashboard"></span>
+                            <span>Pending Prescription Search</span>
+                        </a>
+      </li>
+
+
+      <li class="divider"></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ul>
+   
+
+  </div>
+</div>
+

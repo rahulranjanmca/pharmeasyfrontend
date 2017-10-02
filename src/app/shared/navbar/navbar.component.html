@@ -1,0 +1,37 @@
+<div id="page-header" class="gradiant-1">
+  <div id="mobile-navigation">
+    <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar"><span></span></button>
+    <a href="/dashboard" class="logo-content-small" title="SchoolMonk"></a>
+  </div>
+  <div id="header-logo" class="logo-bg">
+    <a href="/dashboard" class="logo-content-big" title="SchoolMonk">
+            Monarch <i>UI</i>
+            <span>The perfect solution for user interfaces</span>
+        </a>
+    <a href="/dashboard" class="logo-content-small" title="SchoolMonk">
+            Monarch <i>UI</i>
+            <span>The perfect solution for user interfaces</span>
+        </a>
+    <a id="close-sidebar" (click)="closeSideMenu()" title="Close sidebar">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+  </div>
+  <div id="header-nav-left">
+    <div class="user-account-btn dropdown">
+      <a href="#" title="My Account" class="user-profile clearfix" data-toggle="dropdown" aria-expanded="false">
+                <img width="28">
+                <span>{{name}}</span>
+                <i class="glyphicon glyphicon-menu-down"></i>
+            </a>
+      <div class="dropdown-menu float-left">
+        <div class="box-sm">
+
+          <div class="pad5A button-pane button-pane-alt text-center">
+            <a class="btn display-block font-normal btn-danger" (click)='logout()' style="width:100%">
+                            <span class="glyphicon glyphicon-off"></span> Logout
+                        </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

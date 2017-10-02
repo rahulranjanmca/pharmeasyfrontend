@@ -1,0 +1,82 @@
+<div>
+  <div id="page-title">
+    <h2>
+      <span>Pending Request</span></h2>
+  </div>
+
+
+  <div class="panel">
+    <div class="panel-body">
+
+      <div class="example-box-wrapper">
+        <div class="form-horizontal bordered-row">
+          <div class="col-md-12">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>#</th>
+
+                  <th>
+                    <span> Requester First Name</span>
+                  </th>
+
+                  <th>
+                    <span> Requester Last Name</span>
+                  </th>
+                  <th>
+                    <span>Requester Email</span>
+                  </th>
+                  <th>
+                    <span>Prescription By </span>
+                  </th>
+
+
+                  <th>Action</th>
+
+                </tr>
+              </thead>
+              <tbody *ngIf="results">
+
+
+                <tr *ngFor="let row of results;let myindex=index">
+                  <td>{{myindex+1}}</td>
+                  <td>
+                    {{row.firstName}}
+
+                  </td>
+                  <td>
+                    {{row.lastName}}
+
+                  </td>
+
+                  <td>
+                    {{row.patientEmail}}
+                  </td>
+                  <td>
+                    {{row.doctorfirstName}} {{row.doctorLastName}}
+
+                  </td>
+
+
+                  <td>
+                    {{row.doctorEmail}}
+                  </td>
+
+                  <td>
+                    <button (click)="approveRequest(row.id)" type="button" md-raised-button>Accept</button>
+                    <button (click)="rejectRequest(row.id)" type="button" md-raised-button>Reject</button>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
