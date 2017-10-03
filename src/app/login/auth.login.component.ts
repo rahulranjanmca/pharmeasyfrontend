@@ -56,8 +56,7 @@ export class AuthLoginComponent {
                 localStorage.setItem('access_token', value.json().access_token);
                 localStorage.setItem('refresh_token', value.json().refresh_token);
              //   this.router.navigateByUrl('/dashboard')
-                this.globalService.postData<User[]>(true, this.urls.get('cani-login') + '/users/search/0/1',{}).subscribe(users => {
-                    let user:User=users[0];
+                this.globalService.getData<User>(true, this.urls.get('cani-login') + '/users/me',{}).subscribe(user => {
                     localStorage.setItem('name', user.firstName + " " + (user.lastName == null ? '' : user.lastName));
                     localStorage.setItem('userId', user.id.toString());
                 })

@@ -141,18 +141,7 @@ module.exports = function (options) {
         'process.env.ENV': JSON.stringify(METADATA.ENV),
         'process.env.NODE_ENV': JSON.stringify(METADATA.ENV),
         'process.env.HMR': METADATA.HMR,
-        'process.env.cani_shop': JSON.stringify('http://localhost:8089'),
-        'process.env.cani_school': JSON.stringify('http://localhost:8085'),
-        'process.env.cani_login': JSON.stringify('http://localhost:8087'),
-         /*'process.env.cani_invoice': JSON.stringify('http://localhost:8086'),
-        'process.env.cani_email': JSON.stringify('http://localhost:8088'),
-        'process.env.cani_crm': JSON.stringify('http://localhost:8090') 
-        'process.env.cani_shop': JSON.stringify('http://139.162.55.29:8089'),
-        'process.env.cani_school': JSON.stringify('http://139.162.55.29:8085'),
-        'process.env.cani_login': JSON.stringify('http://139.162.55.29:8087'), */
-        'process.env.cani_invoice': JSON.stringify('http://139.162.55.29:8086'),
-        'process.env.cani_email': JSON.stringify('http://139.162.55.29:8088'),
-        'process.env.cani_crm': JSON.stringify('http://139.162.55.29:8090')   
+        'process.env.cani_login': JSON.stringify('http://localhost:8092'),
       }),
 
       // new DllBundlesPlugin({

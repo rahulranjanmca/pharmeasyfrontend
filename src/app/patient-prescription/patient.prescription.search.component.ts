@@ -47,6 +47,7 @@ export class PatientPrescriptionSearchComponent extends AbstractCommonSearchComp
         this.activatedRoute.params.subscribe((params) => {
             this.type = params['type'];
             this.criteria.type=this.type;
+            this.results=[];
            
            
         });

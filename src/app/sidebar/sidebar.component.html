@@ -12,7 +12,7 @@
                 </a>
       </li>
 
-      <li *ngIf="hasAuthority('doctor') || hasAuthority('pharmacist')">
+      <li *ngIf="hasAuthority('doctor')">
         <a [routerLink]="['patient-search']" title="Patient Search">
                         <span class="glyphicon glyphicon-dashboard"></span>
                         <span>Patient Search</span>
